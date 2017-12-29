@@ -21,6 +21,7 @@ add_library(thermo SHARED
         src/thermocouple/thermocouples.h
         src/thermometr/pt.cpp src/thermometr/pt.h
         src/thermometr/tsm.cpp src/thermometr/tsm.h
+        src/thermometr/tsn.cpp src/thermometr/tsn.h
         src/thermometr/thermometr.cpp src/thermometr/thermometr.h
         src/thermometr/thermometers.h
         src/graduation.h)
