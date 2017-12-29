@@ -6,5 +6,6 @@
 #include "mkt.h"
 #include "nnn.h"
 #include "ppr.h"
+#include "pps.h"
 
 #endif
