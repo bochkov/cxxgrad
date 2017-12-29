@@ -12,5 +12,6 @@
 #include "vra2.h"
 #include "vra3.h"
 #include "xak.h"
+#include "xkl.h"
 
 #endif
