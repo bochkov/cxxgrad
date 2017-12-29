@@ -14,6 +14,7 @@ add_library(thermo SHARED
         src/thermocouple/vra1.cpp src/thermocouple/vra1.h
         src/thermocouple/vra2.cpp src/thermocouple/vra2.h
         src/thermocouple/vra3.cpp src/thermocouple/vra3.h
+        src/thermocouple/xak.cpp src/thermocouple/xak.h
         src/thermocouple/thermocouple.cpp src/thermocouple/thermocouple.h
         src/thermocouple/thermocouples.h
         src/graduation.h)
