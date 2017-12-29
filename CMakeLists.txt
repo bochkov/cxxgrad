@@ -10,6 +10,7 @@ add_library(thermo SHARED
         src/thermocouple/nnn.cpp src/thermocouple/nnn.h
         src/thermocouple/ppr.cpp src/thermocouple/ppr.h
         src/thermocouple/pps.cpp src/thermocouple/pps.h
+        src/thermocouple/prb.cpp src/thermocouple/prb.h
         src/thermocouple/thermocouple.cpp src/thermocouple/thermocouple.h
         src/thermocouple/thermocouples.h
         src/graduation.h)
@@ -21,6 +22,7 @@ add_executable(cxxgrad
         src/thermocouple/nnn.cpp src/thermocouple/nnn.h
         src/thermocouple/ppr.cpp src/thermocouple/ppr.h
         src/thermocouple/pps.cpp src/thermocouple/pps.h
+        src/thermocouple/prb.cpp src/thermocouple/prb.h
         src/thermocouple/thermocouple.cpp src/thermocouple/thermocouple.h
         src/thermocouple/thermocouples.h
         src/graduation.h
