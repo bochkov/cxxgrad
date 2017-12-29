@@ -1,4 +1,4 @@
-build/*
-!build/.gitkeep
 src/test.cpp
 *.so
+.idea/
+cmake-*

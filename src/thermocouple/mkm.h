@@ -5,12 +5,16 @@
 
 class MKM : public Thermocouple {
 private:
-  double calculate0(double);
+    double calculate0(double);
+
 public:
-  double temp(double);
-  double value(double);
-  const char* name();
-  const char* description();
+    double temp(double) override;
+
+    double value(double) override;
+
+    const char *name() override;
+
+    const char *description() override;
 };
 
 #endif

@@ -5,14 +5,20 @@
 
 class Thermocouple : public Graduation {
 protected:
-  double calculate(double*, int, double, double);
-  double calculate(double*, int, double);
+    double calculate(const double *, int, double, double);
+
+    double calculate(double *, int, double);
+
 public:
-  virtual ~Thermocouple() {}
-  virtual double temp(double) = 0;
-  virtual double value(double) = 0;
-  virtual const char* name() = 0;
-  virtual const char* description() = 0;
+    ~Thermocouple() override = default;
+
+    double temp(double) override = 0;
+
+    double value(double) override = 0;
+
+    const char *name() override = 0;
+
+    const char *description() override = 0;
 };
 
 #endif

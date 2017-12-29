@@ -3,11 +3,15 @@
 
 class Graduation {
 public:
-  virtual ~Graduation() {}
-  virtual double temp(double) = 0;
-  virtual double value(double) = 0;
-  virtual const char* name() = 0;
-  virtual const char* description() = 0;
+    virtual ~Graduation() = default;
+
+    virtual double temp(double) = 0;
+
+    virtual double value(double) = 0;
+
+    virtual const char *name() = 0;
+
+    virtual const char *description() = 0;
 };
 
 #endif
