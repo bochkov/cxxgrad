@@ -29,8 +29,8 @@ add_library(thermo SHARED
 
 set_target_properties(thermo PROPERTIES SUFFIX ".so")
 
-add_executable(cxxgrad
-        src/test.cpp)
-
-add_dependencies(cxxgrad thermo)
-target_link_libraries(cxxgrad thermo)
+#add_executable(cxxgrad
+#        src/test.cpp)
+#
+#add_dependencies(cxxgrad thermo)
+#target_link_libraries(cxxgrad thermo)
