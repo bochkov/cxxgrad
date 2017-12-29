@@ -14,7 +14,7 @@ protected:
 public:
     ~Thermometr() override = default;
 
-    double temp(double) override = 0;
+    double temp(double) override;
 
     double value(double) override = 0;
 
