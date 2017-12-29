@@ -13,5 +13,6 @@
 #include "vra3.h"
 #include "xak.h"
 #include "xkl.h"
+#include "xkne.h"
 
 #endif
