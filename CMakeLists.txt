@@ -19,6 +19,8 @@ add_library(thermo SHARED
         src/thermocouple/xkne.cpp src/thermocouple/xkne.h
         src/thermocouple/thermocouple.cpp src/thermocouple/thermocouple.h
         src/thermocouple/thermocouples.h
+        src/thermometr/thermometr.cpp src/thermometr/thermometr.h
+        src/thermometr/thermometers.h
         src/graduation.h)
 
 set_target_properties(thermo PROPERTIES SUFFIX ".so")
