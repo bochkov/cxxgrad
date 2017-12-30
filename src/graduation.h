@@ -1,6 +1,11 @@
 #ifndef _graduation_h_
 #define _graduation_h_
 
+typedef struct TRESULT {
+    double val;
+    const char *err;
+} TRESULT;
+
 class Graduation {
 public:
     virtual ~Graduation() = default;
@@ -12,6 +17,24 @@ public:
     virtual const char *name() = 0;
 
     virtual const char *description() = 0;
+
+    TRESULT *temp0(double value) {
+        try {
+            double t = temp(value);
+            return new TRESULT{.val=t};
+        } catch (const char *err) {
+            return new TRESULT{.err=err};
+        }
+    }
+
+    TRESULT *value0(double temp) {
+        try {
+            double v = value(temp);
+            return new TRESULT{.val=v};
+        } catch (const char *err) {
+            return new TRESULT{.err=err};
+        }
+    }
 };
 
 #endif

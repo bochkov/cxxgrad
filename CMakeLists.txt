@@ -25,8 +25,8 @@ add_library(thermo SHARED
         src/thermometr/tsp.cpp src/thermometr/tsp.h
         src/thermometr/thermometr.cpp src/thermometr/thermometr.h
         src/thermometr/thermometers.h
-        src/graduation.h
-        src/cxxgrad.cpp)
+        src/cxxgrad.h src/cxxgrad.cpp
+        src/graduation.h)
 
 set_target_properties(thermo PROPERTIES SUFFIX ".so")
 

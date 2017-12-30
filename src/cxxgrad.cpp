@@ -1,11 +1,4 @@
-#include "graduation.h"
-#include "thermocouple/thermocouples.h"
-#include "thermometr/thermometers.h"
-
-#ifdef __cplusplus
-extern "C"
-#endif
-{
+#include "cxxgrad.h"
 
 const char *th_name(Graduation *gr) {
     return gr->name();
@@ -15,16 +8,24 @@ const char *th_description(Graduation *gr) {
     return gr->description();
 }
 
-double th_value(Graduation *gr, double temp) {
-    return gr->value(temp);
+TRESULT *th_value(Graduation *gr, double temp) {
+    return gr->value0(temp);
 }
 
-double th_temp(Graduation *gr, double value) {
-    return gr->temp(value);
+TRESULT *th_temp(Graduation *gr, double value) {
+    return gr->temp0(value);
 }
 
-void th_delete(Graduation *gr) {
-    delete gr;
+bool tres_success(TRESULT *tr) {
+    return tr->err == nullptr;
+}
+
+double tres_val(TRESULT *tr) {
+    return tr->val;
+}
+
+const char *tres_err(TRESULT *tr) {
+    return tr->err;
 }
 
 Graduation *th_new_jkj() {
@@ -94,4 +95,3 @@ Graduation *th_new_tsn(double r) {
 Graduation *th_new_tsp(double r) {
     return new TSP(r);
 }
-};
