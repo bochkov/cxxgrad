@@ -1,4 +1,3 @@
-//#include <cstring>
 #include <string>
 #include "tsn.h"
 
@@ -30,7 +29,7 @@ double TSN::value(double temp) {
 const char *TSN::name() {
     std::string str = std::to_string((int) R) + "Н";
     auto *cstr = new char[str.length() + 1];
-    std::strcpy(cstr, str.c_str());
+    strcpy(cstr, str.c_str());
     return cstr;
 }
 

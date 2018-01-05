@@ -1,4 +1,3 @@
-#include <cstring>
 #include <string>
 #include "tsp.h"
 
@@ -31,7 +30,7 @@ double TSP::value(double temp) {
 const char *TSP::name() {
     std::string str = std::to_string((int) R) + "П";
     auto *cstr = new char[str.length() + 1];
-    std::strcpy(cstr, str.c_str());
+    strcpy(cstr, str.c_str());
     return cstr;
 }
 

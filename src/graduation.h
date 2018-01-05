@@ -4,6 +4,16 @@
 typedef struct TRESULT {
     double val;
     const char *err;
+
+    explicit TRESULT(double val) {
+        this->val = val;
+        this->err = nullptr;
+    }
+
+    explicit TRESULT(const char *err) {
+        this->val = 0.0;
+        this->err = err;
+    }
 } TRESULT;
 
 class Graduation {
@@ -21,18 +31,18 @@ public:
     TRESULT *temp0(double value) {
         try {
             double t = temp(value);
-            return new TRESULT{.val=t};
+            return new TRESULT(t);
         } catch (const char *err) {
-            return new TRESULT{.err=err};
+            return new TRESULT(err);
         }
     }
 
     TRESULT *value0(double temp) {
         try {
             double v = value(temp);
-            return new TRESULT{.val=v};
+            return new TRESULT(v);
         } catch (const char *err) {
-            return new TRESULT{.err=err};
+            return new TRESULT(err);
         }
     }
 };

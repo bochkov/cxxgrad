@@ -1,4 +1,3 @@
-#include <cstring>
 #include <string>
 #include "tsm.h"
 
@@ -30,7 +29,7 @@ double TSM::value(double temp) {
 const char *TSM::name() {
     std::string str = std::to_string((int) R) + "М";
     auto *cstr = new char[str.length() + 1];
-    std::strcpy(cstr, str.c_str());
+    strcpy(cstr, str.c_str());
     return cstr;
 }
 

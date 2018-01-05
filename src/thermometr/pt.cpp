@@ -29,7 +29,7 @@ double Pt::value(double temp) {
 const char *Pt::name() {
     std::string str = "Pt" + std::to_string((int) R);
     auto *cstr = new char[str.length() + 1];
-    std::strcpy(cstr, str.c_str());
+    strcpy(cstr, str.c_str());
     return cstr;
 }
 
