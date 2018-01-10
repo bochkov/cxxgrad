@@ -15,3 +15,7 @@ double Thermometr::temp(double ohm) {
     } while (fabs(value(middle) - ohm) > EPS);
     return middle;
 }
+
+const char *Thermometr::ed() {
+    return "Ом";
+}

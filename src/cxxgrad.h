@@ -12,6 +12,7 @@ extern "C"
 
 const char *th_name(Graduation *);
 const char *th_description(Graduation *);
+const char *th_ed(Graduation *);
 
 TRESULT *th_value(Graduation *, double);
 TRESULT *th_temp(Graduation *, double);

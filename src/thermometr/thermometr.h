@@ -21,6 +21,8 @@ public:
     const char *name() override = 0;
 
     const char *description() override = 0;
+
+    const char *ed() override;
 };
 
 #endif

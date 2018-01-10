@@ -11,3 +11,7 @@ double Thermocouple::calculate(const double *arr, int len, double value, double 
 double Thermocouple::calculate(double *arr, int len, double value) {
     return calculate(arr, len, value, 0);
 }
+
+const char *Thermocouple::ed() {
+    return "мВ";
+}

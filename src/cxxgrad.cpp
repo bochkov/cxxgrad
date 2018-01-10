@@ -8,6 +8,10 @@ const char *th_description(Graduation *gr) {
     return gr->description();
 }
 
+const char *th_ed(Graduation *gr) {
+    return gr->ed();
+}
+
 TRESULT *th_value(Graduation *gr, double temp) {
     return gr->value0(temp);
 }

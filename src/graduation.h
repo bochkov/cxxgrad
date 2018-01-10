@@ -24,6 +24,8 @@ public:
 
     virtual double value(double) = 0;
 
+    virtual const char *ed() = 0;
+
     virtual const char *name() = 0;
 
     virtual const char *description() = 0;
