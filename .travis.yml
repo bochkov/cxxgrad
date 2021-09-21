@@ -3,11 +3,6 @@ sudo: required
 services:
   - docker
 
-addons:
-  apt:
-    packages:
-      - docker-ce
-
 script:
   - docker --version
-  - docker build -t vassist .
+  - docker build -t cxx .
