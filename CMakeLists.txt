@@ -28,7 +28,7 @@ add_library(thermo SHARED
         src/cxxgrad.h src/cxxgrad.cpp
         src/graduation.h)
 
-set_target_properties(thermo PROPERTIES SUFFIX ".so")
+# set_target_properties(thermo PROPERTIES SUFFIX ".so")
 
 #add_executable(cxxgrad
 #        src/test.cpp)

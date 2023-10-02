@@ -1,4 +1,5 @@
 #include <string>
+#include <cstring>
 #include "pt.h"
 
 Pt::Pt(double r) {

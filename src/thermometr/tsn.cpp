@@ -1,4 +1,5 @@
 #include <string>
+#include <cstring>
 #include "tsn.h"
 
 TSN::TSN(double r) {

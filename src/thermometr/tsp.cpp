@@ -1,4 +1,5 @@
 #include <string>
+#include <cstring>
 #include "tsp.h"
 
 TSP::TSP(double r) {

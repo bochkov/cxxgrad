@@ -1,4 +1,5 @@
 #include <string>
+#include <cstring>
 #include "tsm.h"
 
 TSM::TSM(double r) {
