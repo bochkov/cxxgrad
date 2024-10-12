@@ -2,17 +2,26 @@
 #include "thermometr.h"
 
 double Thermometr::temp(double ohm) {
-    value(ohm); // check illegal argument
     double begin = lower();
+    double vBegin = value(begin);
     double end = higher();
+    double vEnd = value(end);
+    if (ohm < vBegin || ohm > vEnd) {
+        throw "temp is out of bounds";
+    }
     double middle;
-    do {
+    for (;;) {
         middle = (begin + end) / 2;
-        if (value(middle) > ohm)
+        double val = value(middle);
+        if (val > ohm) {
             end = middle;
-        else
+        } else {
             begin = middle;
-    } while (fabs(value(middle) - ohm) > EPS);
+        }
+        if (fabs(val-ohm) < EPS) {
+            break;
+        }
+    }
     return middle;
 }
 

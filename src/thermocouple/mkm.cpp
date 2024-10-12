@@ -4,15 +4,25 @@
 double MKM::calculate0(double v) {
     double EPS = 0.001;
     double begin = -200;
+    double vBegin = value(begin);
     double end = 100;
+    double vEnd = value(end);
+    if (v < vBegin || v > vEnd) {
+        throw "temp is out of bounds";
+    }
     double middle;
-    do {
+    for (;;) {
         middle = (begin + end) / 2;
-        if (v > value(middle))
+        double val = value(middle);
+        if (v > val) {
             begin = middle;
-        else
+        } else {
             end = middle;
-    } while (fabs(v - value(middle)) > EPS);
+        }
+        if (fabs(v-val) < EPS) {
+            break;
+        }
+    }
     return middle;
 }
 

@@ -20,8 +20,8 @@ TRESULT *th_temp(Graduation *gr, double value) {
     return gr->temp0(value);
 }
 
-bool tres_success(TRESULT *tr) {
-    return tr->err == nullptr;
+int tres_success(TRESULT *tr) {
+    return tr->err == nullptr ? 1 : 0;
 }
 
 double tres_val(TRESULT *tr) {

@@ -2,3 +2,4 @@ src/test.cpp
 *.so
 .idea/
 cmake-*
+.vscode/

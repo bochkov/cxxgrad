@@ -1,14 +1,15 @@
 #ifndef _cxxgrad_h_
 #define _cxxgrad_h_
 
+#include <string>
 #include "graduation.h"
 #include "thermocouple/thermocouples.h"
 #include "thermometr/thermometers.h"
 
 #ifdef __cplusplus
 extern "C"
-#endif
 {
+#endif
 
 const char *th_name(Graduation *);
 const char *th_description(Graduation *);
@@ -17,7 +18,7 @@ const char *th_ed(Graduation *);
 TRESULT *th_value(Graduation *, double);
 TRESULT *th_temp(Graduation *, double);
 
-bool tres_success(TRESULT *);
+int tres_success(TRESULT *);
 double tres_val(TRESULT *);
 const char *tres_err(TRESULT *);
 
@@ -39,6 +40,8 @@ Graduation *th_new_pt(double);
 Graduation *th_new_tsm(double);
 Graduation *th_new_tsn(double);
 Graduation *th_new_tsp(double);
-};
 
+#ifdef __cplusplus
+};
+#endif
 #endif
